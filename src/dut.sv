@@ -1,3 +1,6 @@
+`ifndef DUT_SV
+`define DUT_SV
+
 ////////////////////////////////////////
 // DUT /////////////////////////////////
 //                                    //
@@ -45,3 +48,5 @@ assign ff = find_first_funcs#(.WIDTH(16))::find_first1(foobar);
 ////////////////////////////////////////
 
 endmodule
+
+`endif // DUT_SV

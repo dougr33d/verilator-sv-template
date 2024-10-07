@@ -1,3 +1,6 @@
+`ifndef TOP_SV
+`define TOP_SV
+
 module top(
     input logic ck,
     input logic rst
@@ -21,3 +24,5 @@ dut dut (
 );
 
 endmodule
+
+`endif // TOP_SV
