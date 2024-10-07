@@ -35,7 +35,7 @@ int main(int argc, char** argv, char** env) {
     dut->rst = 1;
 
     while (sim_time < MAX_SIM_TIME && !Verilated::gotFinish()) {
-        dut->clk ^= 1;
+        dut->ck ^= 1;
         if (sim_time == 20) {
             dut->rst = 0;
         }

@@ -1,5 +1,5 @@
 module top(
-    input logic clk,
+    input logic ck,
     input logic rst
 );
 
@@ -16,7 +16,7 @@ module top(
 ////////////////////////////////////////
 
 dut dut (
-    .clk,
+    .ck,
     .rst
 );
 
