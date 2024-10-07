@@ -6,8 +6,11 @@
 ////////////////////////////////////////
 
 `include "macros.svh"
+`include "genlib.svh"
 
-module dut(
+module dut
+    import genlib::find_first_funcs;
+(
     input logic ck,
     input logic rst
 );
@@ -33,6 +36,9 @@ cg cgqtr (ckqtr, ck, qtr_en);
 
 logic[15:0] foobar;
 `DFF(foobar, counter, ckqtr)
+
+logic[15:0] ff;
+assign ff = find_first_funcs#(.WIDTH(16))::find_first1(foobar);
 
 ////////////////////////////////////////
 // SVAs ////////////////////////////////
